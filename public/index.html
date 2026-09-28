@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex 2 - Front End Basics (HTML + CSS + JS)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">MyBrand</div>
+    <nav>
+      <button class="hamburger" id="hamburgerBtn">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Hi, I'm a Web Developer</h1>
+    <p>I build simple, fast, accessible websites.</p>
+    <button id="ctaBtn">View My Work</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>Short biography goes here. Replace with your own project's content.</p>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="filter-bar">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="design">Design</button>
+    </div>
+    <div class="grid" id="projectGrid">
+      <!-- filled by JS from data below -->
+    </div>
+  </section>
+
+  <div class="modal" id="projectModal">
+    <div class="modal-content">
+      <span class="close" id="modalClose">&times;</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p><strong>Tech:</strong> <span id="modalTech"></span></p>
+    </div>
+  </div>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="text" id="subject" placeholder="Subject" required>
+      <textarea id="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 MyBrand. All rights reserved.</p>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

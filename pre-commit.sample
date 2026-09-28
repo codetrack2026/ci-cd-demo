@@ -1,0 +1,13 @@
+#!/bin/bash
+# Sample git hook. To activate:
+#   cp pre-commit.sample .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+# From then on, every "git commit" automatically runs the CI pipeline first,
+# entirely offline, and blocks the commit if it fails.
+echo "Running pre-commit CI checks..."
+bash "$(git rev-parse --show-toplevel)/pipeline.sh"
+if [ $? -ne 0 ]; then
+  echo "Commit blocked: pipeline failed."
+  exit 1
+fi
+echo "Pipeline passed. Proceeding with commit."

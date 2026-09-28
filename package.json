@@ -1,0 +1,9 @@
+{
+  "name": "ex11-cicd-landing-page",
+  "version": "1.0.0",
+  "description": "Ex 11 - CI/CD pipeline (GitHub Actions) that tests sample_project and deploys a landing page to GitHub Pages",
+  "scripts": {
+    "test": "node sample_project/app.test.js"
+  },
+  "license": "MIT"
+}
