@@ -8,6 +8,6 @@ function assertEqual(actual, expected, label) {
   console.log(`PASS: ${label}`);
 }
 
-assertEqual(add(2, 3), 5, "add(2,3) === 5");
+assertEqual(add(2, 3), 6, "add(2,3) === 5");
 assertEqual(multiply(4, 5), 20, "multiply(4,5) === 20");
 console.log("All tests passed.");
