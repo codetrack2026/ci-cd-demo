@@ -25,3 +25,14 @@ a GitHub Actions YAML file would express; only the "runner" is local.
    Observe the pipeline running automatically before the commit completes.
 4. In your project report, map each local stage to its real-world CI/CD
    equivalent (e.g., `pipeline.sh` STAGE 1 == GitHub Actions `lint` job).
+
+## Real GitHub Actions + GitHub Pages
+
+This repo also has a real `.github/workflows/ci.yml` that runs on every push /
+pull request to `main`:
+- `build-and-test` installs dependencies and runs `npm test` against
+  `sample_project/`.
+- `deploy` (main branch only, after tests pass) publishes `public/` — a
+  small HTML landing page — to GitHub Pages.
+
+Live site: https://codetrack2026.github.io/ci-cd-demo/
